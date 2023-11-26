@@ -1,0 +1,1 @@
+TARGET_BOARD_PLATFORM := holi
