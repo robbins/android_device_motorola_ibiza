@@ -59,6 +59,6 @@ PRODUCT_COPY_FILES += \
 
 DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
 
-# AB
+# A/B
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
