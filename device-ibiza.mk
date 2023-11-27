@@ -14,3 +14,6 @@ AB_OTA_PARTITIONS += \
     vendor_boot \
     vbmeta \
     vbmeta_system
+
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true

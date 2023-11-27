@@ -57,6 +57,9 @@ BOARD_DTBOIMG_PARTITION_SIZE := 24576000
 PRODUCT_COPY_FILES += \
 		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
 
+# Super partition
+BOARD_SUPER_PARTITION_SIZE := 12582912000
+
 DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
 
 # A/B
