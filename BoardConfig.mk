@@ -63,6 +63,8 @@ BOARD_SUPER_PARTITION_SIZE := 12582912000
 
 DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
 
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/4804000.ufshc
+
 # A/B
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
