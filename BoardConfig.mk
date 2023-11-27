@@ -15,13 +15,16 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sm4350
 
-# Kernel
+# Prebuilt Kernel
 TARGET_PREBUILT_KERNEL := device/motorola/ibiza/prebuilt/kernel
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 PRODUCT_COPY_FILES += \
   $(LOCAL_KERNEL):kernel
+
+# Boot image
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x5dc0000
 
 # DTB
 BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/ibiza/prebuilt
@@ -33,3 +36,7 @@ PRODUCT_COPY_FILES += \
 		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
 
 DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
+
+# AB
+TARGET_NO_RECOVERY := true
+BOARD_USES_RECOVERY_AS_BOOT := true
