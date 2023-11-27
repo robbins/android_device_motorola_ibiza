@@ -20,3 +20,4 @@ TARGET_PREBUILT_KERNEL := device/motorola/ibiza/prebuilt/kernel
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 PRODUCT_COPY_FILES := \
   $(LOCAL_KERNEL):kernel
+DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
