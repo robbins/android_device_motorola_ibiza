@@ -18,6 +18,18 @@ TARGET_BOOTLOADER_BOARD_NAME := sm4350
 # Kernel
 TARGET_PREBUILT_KERNEL := device/motorola/ibiza/prebuilt/kernel
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
   $(LOCAL_KERNEL):kernel
+BOARD_BOOT_HEADER_VERSION := 3
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+# DTB
+BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/ibiza/prebuilt
+BOARD_MKBOOTIMG_ARGS += --dtb $(BOARD_PREBUILT_DTBIMAGE_DIR)/dtb.img
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
+# Vendor boot
+PRODUCT_COPY_FILES += \
+		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
+
 DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
