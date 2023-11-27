@@ -31,6 +31,11 @@ BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/ibiza/prebuilt
 BOARD_MKBOOTIMG_ARGS += --dtb $(BOARD_PREBUILT_DTBIMAGE_DIR)/dtb.img
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
+# DTBO
+BOARD_PREBUILT_DTBOIMAGE := device/motorola/ibiza/prebuilt/dtbo.img
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_DTBOIMG_PARTITION_SIZE := 24576000
+
 # Vendor boot
 PRODUCT_COPY_FILES += \
 		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
