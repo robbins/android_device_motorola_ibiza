@@ -56,7 +56,7 @@ BOARD_DTBOIMG_PARTITION_SIZE := 25235456
 
 # Vendor boot
 PRODUCT_COPY_FILES += \
-		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
+		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 
 # Dynamic partitions
@@ -86,10 +86,22 @@ BOARD_AVB_VBMETA_SYSTEM_ALGORITHM ?= SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
-BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/4804000.ufshc
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/4804000.ufshc console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x04C8C000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.usbcontroller=4e00000.dwc3 loop.max_part=7 androidboot.selinux=permissive
 
 DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
 
 # A/B
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
+
+KERNEL_MODULE_DIR := device/motorola/ibiza/vendor-kernel-modules
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
+
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+#BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
