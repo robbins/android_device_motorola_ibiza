@@ -86,7 +86,7 @@ BOARD_AVB_VBMETA_SYSTEM_ALGORITHM ?= SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
-BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/4804000.ufshc console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x04C8C000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.usbcontroller=4e00000.dwc3 loop.max_part=7 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/4804000.ufshc console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x04C8C000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.usbcontroller=4e00000.dwc3 loop.max_part=7 androidboot.selinux=permissive loglevel=7 printk.devkmsg=on androidboot.init_fatal_panic=true printk.always_kmsg_dump=1 androidboot.init_fatal_reboot_target=recovery
 
 DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
 
