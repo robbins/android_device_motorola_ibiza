@@ -17,3 +17,8 @@ AB_OTA_PARTITIONS += \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Init files
+PRODUCT_COPY_FILES += \
+        device/motorola/ibiza/rootdir/init.target.rc:$(TARGET_COPY_OUT_ROOT)/init.qcom.rc \
+        device/motorola/ibiza/rootdir/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
