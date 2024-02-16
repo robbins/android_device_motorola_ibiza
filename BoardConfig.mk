@@ -56,7 +56,9 @@ BOARD_DTBOIMG_PARTITION_SIZE := 25235456
 
 # Vendor boot
 PRODUCT_COPY_FILES += \
-		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
+		      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
+                      device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 
 # Dynamic partitions
