@@ -1,0 +1,24 @@
+on early-init
+    loglevel 7
+    setprop sys.init_log_level 7
+    write /proc/sys/kernel/printk 7
+
+ on init
+    setprop sys.usb.configfs 1
+    mount pstore pstore /sys/fs/pstore
+
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+# configfs 1 uses init.usb.configfs.rc which breaks fastbootd gui
+on property:sys.usb.config=fastboot
+    setprop sys.usb.configfs 0
+
+# re-enable configfs when coming out of fastbootd and back to recovery
+on property:sys.usb.config=adb
+    setprop sys.usb.configfs 1
+
+on property:ro.boot.usbcontroller=*
+    setprop sys.usb.controller ${ro.boot.usbcontroller}
+    write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
