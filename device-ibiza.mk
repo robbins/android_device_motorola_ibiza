@@ -28,3 +28,7 @@ PRODUCT_SYSTEM_PROPERTIES += sys.init_log_level=7
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.dm_default_key.options_format.version=2
+
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1-impl \
+    android.hardware.keymaster@4.1-service
