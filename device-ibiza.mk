@@ -30,5 +30,28 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.dm_default_key.options_format.version=2
 
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1 \
+    android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster@4.1-impl \
-    android.hardware.keymaster@4.1-service
+    android.hardware.keymaster@4.1-service \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0 \
+    android.hardware.gatekeeper@1.0.vendor
+
+#PRODUCT_PACKAGES += \
+#    android.hardware.keymaster@4.1 \
+#    android.hardware.keymaster@4.1.vendor \
+#    android.hardware.keymaster@4.0 \
+#    android.hardware.keymaster@4.0.vendor \
+#    android.hardware.boot@1.1-service \
+#    android.hardware.boot@1.1-impl \
+#    android.system.keystore2 \
+#    android.hardware.keymaster@4.1-impl \
+#    android.hardware.keymaster@4.1-service \
+#    android.hardware.keymaster@4.0-impl \
+#    android.hardware.keymaster@4.0-service \
+#    android.hardware.gatekeeper@1.0-impl \
+#    android.hardware.gatekeeper@1.0-service \
+#    android.hardware.gatekeeper@1.0 \
+#    android.hardware.gatekeeper@1.0.vendor
