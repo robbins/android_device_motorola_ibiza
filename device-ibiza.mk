@@ -34,10 +34,13 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster@4.1-impl \
     android.hardware.keymaster@4.1-service \
-    android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0 \
     android.hardware.gatekeeper@1.0.vendor
+    #android.hardware.gatekeeper@1.0-impl \
+
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/rootdir/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 #PRODUCT_PACKAGES += \
 #    android.hardware.keymaster@4.1 \
