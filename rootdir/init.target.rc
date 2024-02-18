@@ -10,6 +10,7 @@ on init
     # For correctly mounting partitions
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    start vendor.keymaster-4-1
 
 on fs
     # Mount partitions early (UDC)
@@ -28,3 +29,11 @@ on early-fs
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
+
+service vendor.keymaster-4-1 /vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
+    interface android.hardware.keymaster@4.0::IKeymasterDevice default
+    interface android.hardware.keymaster@4.1::IKeymasterDevice default
+    seclabel u:object_r:system_file:s0
+    class early_hal
+    user system
+    group system drmrpc
