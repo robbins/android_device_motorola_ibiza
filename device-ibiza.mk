@@ -40,7 +40,8 @@ PRODUCT_PACKAGES += \
     #android.hardware.gatekeeper@1.0-impl \
 
 PRODUCT_COPY_FILES += \
-    device/motorola/ibiza/rootdir/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+    device/motorola/ibiza/rootdir/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
+    device/motorola/ibiza/rootdir/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd
 
 #PRODUCT_PACKAGES += \
 #    android.hardware.keymaster@4.1 \

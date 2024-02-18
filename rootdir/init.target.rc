@@ -10,6 +10,9 @@ on init
     # For correctly mounting partitions
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    #qseecomd
+    wait /dev/qseecom
+    start vendor.qseecomd
 
 on fs
     # Mount partitions early (UDC)
@@ -28,3 +31,9 @@ on early-fs
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
+
+service vendor.qseecomd /vendor/bin/qseecomd
+    class core
+    user root
+    group root
+    seclabel u:r:recovery:s0
