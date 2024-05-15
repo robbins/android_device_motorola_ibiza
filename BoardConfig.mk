@@ -52,6 +52,7 @@ BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=4e00000.dwc3
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=$(PRODUCT_PLATFORM)
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/4804000.ufshc
+BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 
 # Dynamic partitions
 BOARD_SUPER_PARTITION_SIZE := 12884901888
