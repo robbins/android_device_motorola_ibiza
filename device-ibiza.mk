@@ -16,3 +16,8 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Debug
 PRODUCT_PACKAGES_DEBUG += update_engine_client
+
+# Prebuilt kernel
+TARGET_PREBUILT_KERNEL := device/motorola/ibiza/kernel
+PRODUCT_COPY_FILES += \
+	$(TARGET_PREBUILT_KERNEL):kernel
