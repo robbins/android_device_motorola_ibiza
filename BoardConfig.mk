@@ -13,3 +13,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo
+
+# Vendor Interface Manifest
+DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
