@@ -6,7 +6,12 @@ AB_OTA_PARTITIONS := \
   boot \
   system \
   vendor \
-  vendor_boot
+  vendor_boot \
+  dtbo \
+  product \
+  system_ext \
+  vbmeta \
+  vbmeta_system
 PRODUCT_PACKAGES += \
   update_engine \
   update_verifier
