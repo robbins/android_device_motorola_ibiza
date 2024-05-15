@@ -27,7 +27,8 @@ PRODUCT_PACKAGES_DEBUG += update_engine_client
 TARGET_PREBUILT_KERNEL := device/motorola/ibiza/kernel
 PRODUCT_COPY_FILES += \
 	$(TARGET_PREBUILT_KERNEL):kernel \
-	device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
+	device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
+	device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
