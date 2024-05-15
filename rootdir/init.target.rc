@@ -1,7 +1,7 @@
 on early-init
     # Debugging
-    loglevel 7
-    setprop sys.init_log_level 7
+    # loglevel 7
+    # setprop sys.init_log_level 7
     write /proc/sys/kernel/printk 7
 
 on init
