@@ -16,3 +16,6 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo
 
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := device/motorola/ibiza/manifest.xml
+
+# Boot Partition
+BOARD_BOOTIMAGE_PARTITION_SIZE := 98304000
