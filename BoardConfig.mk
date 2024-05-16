@@ -52,6 +52,7 @@ BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=4e00000.dwc3
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0,115200n8
 BOARD_KERNEL_CMDLINE += earlycon=msm_geni_serial,0x04C8C000
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/4804000.ufshc
+BOARD_KERNEL_CMDLINE += androidboot.bootdevice=4804000.ufshc
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 
 # Dynamic partitions
@@ -70,3 +71,4 @@ BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 BOARD_USES_METADATA_PARTITION := true
+BOARD_ROOT_EXTRA_FOLDERS := metadata
