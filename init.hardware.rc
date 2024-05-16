@@ -1,0 +1,18 @@
+on early-init
+    loglevel 7
+    setprop sys.init_log_level 7
+    write /proc/sys/kernel/printk 7
+
+on init
+    # For correctly mounting partitions
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+on fs
+    # Mount partitions early (UDC)
+    mount_all /vendor/etc/fstab.qcom --early
+
+on late-fs
+    # Wait for keymaster (encrypt/decrypt) and then mount late (userdata is latemount)
+    exec_start wait_for_keymaster
+    mount_all /vendor/etc/fstab.qcom --late
