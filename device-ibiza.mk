@@ -39,3 +39,5 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl \
     android.hardware.boot@1.1-service
+
+TARGET_RECOVERY_FSTAB := device/motorola/ibiza/fstab.hardware
