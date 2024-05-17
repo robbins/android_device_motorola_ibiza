@@ -30,7 +30,8 @@ PRODUCT_COPY_FILES += \
 	device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
 	device/motorola/ibiza/fstab.hardware:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
 	device/motorola/ibiza/init.hardware.rc:$(TARGET_COPY_OUT_ROOT)/init.qcom.rc \
-	device/motorola/ibiza/init.hardware.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
+	device/motorola/ibiza/init.hardware.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc \
+	device/motorola/ibiza/init.recovery.hardware.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
