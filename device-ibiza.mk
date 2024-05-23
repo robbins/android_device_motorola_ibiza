@@ -66,6 +66,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/ibiza/rootdir/vendor/lib/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterdeviceutils.so \
     device/motorola/ibiza/rootdir/vendor/lib/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterprovision.so
 
+PRODUCT_PACKAGES += android.system.keystore2
+
 # Gatekeeper HIDL Interface Library
 PRODUCT_PACKAGES += android.hardware.gatekeeper@1.0.vendor
 
@@ -74,3 +76,15 @@ PRODUCT_COPY_FILES += \
     device/motorola/ibiza/rootdir/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     device/motorola/ibiza/rootdir/vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
     device/motorola/ibiza/rootdir/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/rootdir/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
+    device/motorola/ibiza/rootdir/vendor/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \
+    device/motorola/ibiza/rootdir/vendor/lib64/libqcbor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcbor.so \
+    device/motorola/ibiza/rootdir/vendor/lib/libqcbor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcbor.so \
+    device/motorola/ibiza/rootdir/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so \
+    device/motorola/ibiza/rootdir/vendor/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQSEEComAPI.so \
+    device/motorola/ibiza/rootdir/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
+    device/motorola/ibiza/rootdir/vendor/lib/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib/librpmb.so \
+    device/motorola/ibiza/rootdir/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
+    device/motorola/ibiza/rootdir/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so

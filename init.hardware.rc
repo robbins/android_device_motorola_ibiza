@@ -4,9 +4,15 @@ on early-init
     write /proc/sys/kernel/printk 7
 
 on init
+    # USB
+    setprop sys.usb.configfs 1
+    mount pstore pstore /sys/fs/pstore
     # For correctly mounting partitions
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    start gatekeeper-1-0
+    wait /dev/qseecom
+    start vendor.qseecomd
 
 on fs
     # Mount partitions early (UDC)
@@ -20,3 +26,12 @@ on late-fs
     # Running unencrypted, just wait for hwservicemanager before mounting
     wait_for_prop hwservicemanager.ready true
     mount_all /vendor/etc/fstab.qcom --late
+
+on property:ro.boot.usbcontroller=*
+    setprop sys.usb.controller ${ro.boot.usbcontroller}
+    write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
+
+service vendor.qseecomd /vendor/bin/qseecomd
+    class core
+    user root
+    group root
