@@ -42,3 +42,26 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-service
 
 TARGET_RECOVERY_FSTAB := device/motorola/ibiza/fstab.hardware
+
+# Keymaster HIDL Interface Library
+PRODUCT_PACKAGES += android.hardware.keymaster@4.1.vendor
+
+# Keymaster Service
+# Files installed by hardware/interfaces/keymaster/4.1 in AOSP
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/rootdir/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti \
+    device/motorola/ibiza/rootdir/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
+    device/motorola/ibiza/rootdir/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so
+
+# Files installed in TWRP tree
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/rootdir/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
+    device/motorola/ibiza/rootdir/vendor/lib64/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
+    device/motorola/ibiza/rootdir/vendor/lib64/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterprovision.so
+
+# 32-bit
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/rootdir/vendor/lib/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtikeymaster4.so \
+    device/motorola/ibiza/rootdir/vendor/lib/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterutils.so \
+    device/motorola/ibiza/rootdir/vendor/lib/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterdeviceutils.so \
+    device/motorola/ibiza/rootdir/vendor/lib/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterprovision.so
