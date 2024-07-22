@@ -13,7 +13,6 @@ on fs
     mount_all /vendor/etc/fstab.qcom --early
 
 on late-fs
-    # Wait for hwservicemanager & keymaster (encrypt/decrypt) and then mount late (userdata is latemount)
+    # Wait for hwservicemanager and then mount late (userdata is latemount)
     wait_for_prop hwservicemanager.ready true
-    exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
