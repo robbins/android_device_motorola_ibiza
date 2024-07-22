@@ -88,3 +88,5 @@ PRODUCT_COPY_FILES += \
     device/motorola/ibiza/rootdir/vendor/lib/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib/librpmb.so \
     device/motorola/ibiza/rootdir/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
     device/motorola/ibiza/rootdir/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so
+
+PRODUCT_PACKAGES += fastbootd
