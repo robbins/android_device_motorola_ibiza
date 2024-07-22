@@ -42,3 +42,5 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-service
 
 TARGET_RECOVERY_FSTAB := device/motorola/ibiza/fstab.hardware
+
+PRODUCT_PACKAGES += fastbootd
