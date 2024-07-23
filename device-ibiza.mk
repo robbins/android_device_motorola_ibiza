@@ -48,6 +48,7 @@ PRODUCT_PACKAGES += fastbootd
 # Gatekeeper
 # Install interface library to vendor partition
 PRODUCT_PACKAGES += android.hardware.gatekeeper@1.0.vendor
+PRODUCT_PACKAGES += android.hardware.gatekeeper@1.0
 # Install Qualcomm Gatekeeper Service & rc file
 PRODUCT_COPY_FILES += \
     device/motorola/ibiza/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
@@ -61,6 +62,8 @@ PRODUCT_COPY_FILES += \
 # Install interface library to vendor partition
 PRODUCT_PACKAGES += android.hardware.keymaster@4.1.vendor
 PRODUCT_PACKAGES += android.hardware.keymaster@4.0.vendor
+PRODUCT_PACKAGES += android.hardware.keymaster@4.1
+PRODUCT_PACKAGES += android.hardware.keymaster@4.0
 # Install Service, rc, Implementation
 PRODUCT_COPY_FILES += \
     device/motorola/ibiza/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
@@ -85,4 +88,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/ibiza/vendor/bin/hw/android.hardware.usb@1.2-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.2-service-qti \
     device/motorola/ibiza/vendor/etc/init/android.hardware.usb@1.2-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-qti.rc
-PRODUCT_PACKAGES += android.hardware.usb@1.2.so
+PRODUCT_PACKAGES += android.hardware.usb@1.2.vendor
+PRODUCT_PACKAGES += android.hardware.usb@1.2

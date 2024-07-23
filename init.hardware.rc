@@ -1,7 +1,7 @@
-on early-init
-    loglevel 7
-    setprop sys.init_log_level 7
-    write /proc/sys/kernel/printk 7
+#on early-init
+#    loglevel 7
+#    setprop sys.init_log_level 7
+#    write /proc/sys/kernel/printk 7
 
 on init
     # For correctly mounting partitions
@@ -12,7 +12,23 @@ on fs
     # Mount partitions early (UDC)
     mount_all /vendor/etc/fstab.qcom --early
 
+on post-fs
+    write /metadata/postfs.txt ONPOSTFS
+
 on late-fs
     # Wait for hwservicemanager and then mount late (userdata is latemount)
     wait_for_prop hwservicemanager.ready true
     mount_all /vendor/etc/fstab.qcom --late
+
+on post-fs-data
+    write /metadata/postfs-data.txt ONPOSTFS-DATA
+
+service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on post-fs
+    start logger
