@@ -60,8 +60,10 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 # Install interface library to vendor partition
 PRODUCT_PACKAGES += android.hardware.keymaster@4.1.vendor
+PRODUCT_PACKAGES += android.hardware.keymaster@4.0.vendor
 # Install Service, rc, Implementation
 PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
     device/motorola/ibiza/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti \
     device/motorola/ibiza/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
     device/motorola/ibiza/vendor/lib/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterdeviceutils.so \
@@ -78,3 +80,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/ibiza/vendor/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQSEEComAPI.so \
     device/motorola/ibiza/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so
+
+# QTI USB HAL
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/vendor/bin/hw/android.hardware.usb@1.2-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.2-service-qti \
+    device/motorola/ibiza/vendor/etc/init/android.hardware.usb@1.2-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-qti.rc
+PRODUCT_PACKAGES += android.hardware.usb@1.2.so
