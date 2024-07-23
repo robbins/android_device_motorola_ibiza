@@ -44,3 +44,32 @@ PRODUCT_PACKAGES += \
 TARGET_RECOVERY_FSTAB := device/motorola/ibiza/fstab.hardware
 
 PRODUCT_PACKAGES += fastbootd
+
+# Gatekeeper
+# Install interface library to vendor partition
+PRODUCT_PACKAGES += android.hardware.gatekeeper@1.0.vendor
+# Install Qualcomm Gatekeeper Service & rc file
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
+    device/motorola/ibiza/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+# Install Qualcomm Gatekeeper Implementation
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
+    device/motorola/ibiza/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+
+# Keymaster
+# Install interface library to vendor partition
+PRODUCT_PACKAGES += android.hardware.keymaster@4.1.vendor
+# Install Service, rc, Implementation
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti \
+    device/motorola/ibiza/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
+    device/motorola/ibiza/vendor/lib/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterdeviceutils.so \
+    device/motorola/ibiza/vendor/lib/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterprovision.so \
+    device/motorola/ibiza/vendor/lib/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libkeymasterutils.so \
+    device/motorola/ibiza/vendor/lib/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtikeymaster4.so \
+    device/motorola/ibiza/vendor/lib64/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
+    device/motorola/ibiza/vendor/lib64/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterprovision.so \
+    device/motorola/ibiza/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
+    device/motorola/ibiza/vendor/lib64/libqcbor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcbor.so \
+    device/motorola/ibiza/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so
