@@ -73,3 +73,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/ibiza/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
     device/motorola/ibiza/vendor/lib64/libqcbor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcbor.so \
     device/motorola/ibiza/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so
+
+# Libs for keymaster/gatekeeper
+PRODUCT_COPY_FILES += \
+    device/motorola/ibiza/vendor/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQSEEComAPI.so \
+    device/motorola/ibiza/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so
