@@ -16,3 +16,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo
 
 # Provide VINTF vendor manifest
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+
+# A/B
+TARGET_NO_RECOVERY := true
+BOARD_USES_RECOVERY_AS_BOOT := true
