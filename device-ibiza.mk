@@ -1,5 +1,7 @@
 LOCAL_PATH := device/motorola/ibiza
 
+PRODUCT_PLATFORM := qcom
+
 # Use the A/B updater
 AB_OTA_UPDATER := true
 PRODUCT_PACKAGES += \
@@ -11,6 +13,7 @@ PRODUCT_PACKAGES_DEBUG += update_engine_client
 # A/B updatable partitions
 AB_OTA_PARTITIONS := \
   boot \
+  vendor_boot \
   system \
   vendor \
   system_ext \
@@ -21,9 +24,12 @@ AB_OTA_PARTITIONS := \
 
 # Prebuilt kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
-
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
 	$(TARGET_PREBUILT_KERNEL):kernel
+
+# Vendor boot
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
