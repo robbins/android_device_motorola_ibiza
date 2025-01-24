@@ -68,3 +68,4 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Recovery
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0,115200n8
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
