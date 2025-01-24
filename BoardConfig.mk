@@ -62,3 +62,9 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
+# Selinux
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+# Recovery
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0,115200n8
