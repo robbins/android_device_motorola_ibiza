@@ -33,3 +33,11 @@ PRODUCT_COPY_FILES += \
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# fastbootd
+PRODUCT_PACKAGES += \
+	fastbootd
+
+# USB in recovery and fixing fail to open error using bootdevice symlink
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
