@@ -1,5 +1,10 @@
+on early-fs
+    start vold
+
 on fs
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --early
 
 on late-fs
+    exec_start wait_for_keymaster
+
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --late

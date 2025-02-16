@@ -49,3 +49,6 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/conf/init.hardware.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
+
+# Metadata encryotion
+PRODUCT_SHIPPING_API_LEVEL := 30
