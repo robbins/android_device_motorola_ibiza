@@ -79,3 +79,6 @@ BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=4e00000.dwc3
 
 # Debug
 BOARD_KERNEL_CMDLINE += printk.devkmsg=on androidboot.init_fatal_panic=true printk.always_kmsg_dump=1 androidboot.init_fatal_reboot_target=recovery
+
+#Metadata encryption
+BOARD_USES_METADATA_PARTITION := true
