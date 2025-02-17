@@ -83,3 +83,5 @@ BOARD_KERNEL_CMDLINE += printk.devkmsg=on androidboot.init_fatal_panic=true prin
 # Metadata encryption
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS := metadata
+
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

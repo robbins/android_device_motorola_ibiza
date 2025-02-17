@@ -51,4 +51,24 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/conf/init.hardware.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
 
 # Metadata encryotion
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.dm_default_key.options_format.version=2
+
+# Health (didnt start yet)
+PRODUCT_PACKAGES += android.hardware.health@2.1-service
+
+# Keymaster
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/prebuilt/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti
+
+# Gatekeeper
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
+	$(LOCAL_PATH)/prebuilt/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
+	$(LOCAL_PATH)/prebuilt/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
+	$(LOCAL_PATH)/prebuilt/libqcbor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcbor.so \
+	$(LOCAL_PATH)/prebuilt/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so
+
+# Boot (didnt start yet)
+PRODUCT_PACKAGES += android.hardware.boot@1.1-service
+PRODUCT_PACKAGES += android.hardware.boot@1.1-impl
