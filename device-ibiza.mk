@@ -59,7 +59,20 @@ PRODUCT_PACKAGES += android.hardware.health@2.1-service
 
 # Keymaster
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/prebuilt/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti
+        $(LOCAL_PATH)/prebuilt/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti \
+        $(LOCAL_PATH)/prebuilt/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so \
+        $(LOCAL_PATH)/prebuilt/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
+        $(LOCAL_PATH)/prebuilt/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
+        $(LOCAL_PATH)/prebuilt/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
+        $(LOCAL_PATH)/prebuilt/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
+        $(LOCAL_PATH)/prebuilt/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
+        $(LOCAL_PATH)/prebuilt/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
+        $(LOCAL_PATH)/prebuilt/libops.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libops.so \
+        $(LOCAL_PATH)/prebuilt/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
+        $(LOCAL_PATH)/prebuilt/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
+        $(LOCAL_PATH)/prebuilt/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel.so \
+        $(LOCAL_PATH)/prebuilt/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel_svc.so \
+        $(LOCAL_PATH)/prebuilt/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdiag.so
 
 # Gatekeeper
 PRODUCT_COPY_FILES += \
@@ -68,6 +81,15 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/prebuilt/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
 	$(LOCAL_PATH)/prebuilt/libqcbor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcbor.so \
 	$(LOCAL_PATH)/prebuilt/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so
+
+# Unknown
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
+	$(LOCAL_PATH)/prebuilt/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \
+	$(LOCAL_PATH)/prebuilt/libdisplayconfig.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayconfig.qti.so \
+	$(LOCAL_PATH)/prebuilt/vendor.display.config@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@2.0.so
+
+# Qseecomd
 
 # Boot (didnt start yet)
 PRODUCT_PACKAGES += android.hardware.boot@1.1-service

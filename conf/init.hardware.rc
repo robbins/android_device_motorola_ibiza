@@ -16,6 +16,8 @@ on late-fs
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    wait /dev/qseecom
+    start vendor.qseecomd
     start vendor.keymaster-4-1
 
 service vendor.keymaster-4-1 /vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
@@ -27,3 +29,8 @@ service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qt
     class early_hal
     user system
     group system
+
+service vendor.qseecomd /vendor/bin/qseecomd
+    class core
+    user root
+    group root
