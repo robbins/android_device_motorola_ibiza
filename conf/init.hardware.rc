@@ -1,7 +1,18 @@
 on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+    mount tracefs tracefs /sys/kernel/tracing
+    chmod 0755 /sys/kernel/tracing
     loglevel 7
     setprop sys.init_log_level 7
     write /proc/sys/kernel/printk 7
+
+on init
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    wait /dev/qseecom
+    start vendor.qseecomd
+    start vendor.keymaster-4-1
 
 on early-fs
     start vold
@@ -12,13 +23,6 @@ on fs
 on late-fs
     exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --late
-
-on init
-    wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    wait /dev/qseecom
-    start vendor.qseecomd
-    start vendor.keymaster-4-1
 
 service vendor.keymaster-4-1 /vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
     class early_hal
