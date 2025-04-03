@@ -85,7 +85,7 @@ PRODUCT_COPY_FILES += \
 # Unknown
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/prebuilt/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
-	$(LOCAL_PATH)/prebuilt/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \
+	$(LOCAL_PATH)/prebuilt/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
 	$(LOCAL_PATH)/prebuilt/libdisplayconfig.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayconfig.qti.so \
 	$(LOCAL_PATH)/prebuilt/vendor.display.config@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@2.0.so
 
