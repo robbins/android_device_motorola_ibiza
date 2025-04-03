@@ -56,6 +56,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Health (didnt start yet)
 PRODUCT_PACKAGES += android.hardware.health@2.1-service
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/prebuilt/android.hardware.health@2.0-impl-2.1-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.health@2.0-impl-2.1-qti.so
 
 # Keymaster
 PRODUCT_COPY_FILES += \
