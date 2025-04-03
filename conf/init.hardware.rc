@@ -21,7 +21,7 @@ on fs
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --early
 
 on late-fs
-    exec_start wait_for_keymaster
+    # exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --late
 
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
