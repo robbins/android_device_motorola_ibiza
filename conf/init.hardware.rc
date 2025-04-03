@@ -15,20 +15,12 @@ on early-fs
     start vold
 
 on fs
-    mkdir /dev/usb-ffs 0775 shell shell
-    mkdir /dev/usb-ffs/adb 0770 shell shell
-    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
-    mkdir /dev/usb-ffs/fastboot 0770 system system
-    mount functionfs fastboot /dev/usb-ffs/fastboot rmode=0770,fmode=0660,uid=1000,gid=1000
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --early
 
 on late-fs
     chmod 0755 /sys/kernel/tracing
     chmod 0755 /sys/kernel/debug/tracing
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --late
-
-on early-boot
-    setprop logd.logpersistd logcatd
 
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x18d1
@@ -53,19 +45,8 @@ on boot
     mkdir /dev/usb-ffs/adb 0770 shell system
     mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=1000,rmode=0770,fmode=0660
 
-#on property:sys.usb.config=adb && property:sys.usb.configfs=1
-#    write /config/usb_gadget/g1/idVendor 0x22b8
-#    write /config/usb_gadget/g1/idProduct 0x2E81
-
 # WAR for stock kernel setting CONFIG_USB_DUMMY_HCD=y
 # FunctionFS won't mount with a dummy controller
 on property:sys.usb.controller=dummy_udc.0
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     setprop sys.usb.configfs 1
-
-service logcat_service /system/bin/logcat -s adbd
-    class late_start
-    user root
-    group root
-    oneshot
-    stdio_to_kmsg
