@@ -109,31 +109,6 @@ on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     setprop sys.usb.configfs 1
 
-service debug_functionfs /vendor/bin/sh /vendor/bin/debug_functionfs.sh
-    class late_start
-    user root
-    group root
-    oneshot
-
 on property:sys.usb.controller=dummy_udc.0
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     setprop sys.usb.configfs 1
-
-service logcat_service /system/bin/logcat -f /dev/kmsg -s adbd
-    class late_start
-    user root
-    group root
-    oneshot
-
-service logcat_servicee /system/bin/logcat -f /dev/kmsg_debug -s adbd
-    class late_start
-    user root
-    group root
-    oneshot
-
-service logcat_serviceee /system/bin/logcat -s adbd
-    class late_start
-    user root
-    group root
-    oneshot
-    stdio_to_kmsg
