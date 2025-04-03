@@ -89,6 +89,9 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/prebuilt/libdisplayconfig.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayconfig.qti.so \
 	$(LOCAL_PATH)/prebuilt/vendor.display.config@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@2.0.so
 
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/script.sh:$(TARGET_COPY_OUT_VENDOR)/bin/debug_functionfs.sh
+
 # Qseecomd
 
 # Boot (didnt start yet)
