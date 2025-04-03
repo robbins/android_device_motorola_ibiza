@@ -10,6 +10,9 @@ on early-init
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    wait /dev/qseecom
+    start vendor.qseecomd
+    start vendor.keymaster-4-1
 
 on early-fs
     start vold
@@ -18,8 +21,7 @@ on fs
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --early
 
 on late-fs
-    chmod 0755 /sys/kernel/tracing
-    chmod 0755 /sys/kernel/debug/tracing
+    exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --late
 
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
@@ -50,3 +52,18 @@ on boot
 on property:sys.usb.controller=dummy_udc.0
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     setprop sys.usb.configfs 1
+
+service vendor.keymaster-4-1 /vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
+    class early_hal
+    user system
+    group system drmrpc
+
+service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+    class early_hal
+    user system
+    group system
+
+service vendor.qseecomd /vendor/bin/qseecomd
+    class core
+    user root
+    group root
