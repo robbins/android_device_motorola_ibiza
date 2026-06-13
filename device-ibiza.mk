@@ -96,3 +96,17 @@ PRODUCT_COPY_FILES += \
 # Boot (didnt start yet)
 PRODUCT_PACKAGES += android.hardware.boot@1.1-service
 PRODUCT_PACKAGES += android.hardware.boot@1.1-impl
+
+# Audio
+#$(LOCAL_PATH)/conf/android.hardware.audio.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service.rc
+#$(LOCAL_PATH)/prebuilt/android.hardware.audio.service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.audio.service
+#PRODUCT_COPY_FILES += \
+#	$(LOCAL_PATH)/prebuilt/32/android.hardware.audio@6.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio@6.0-impl.so \
+#	$(LOCAL_PATH)/prebuilt/64/android.hardware.audio@6.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@6.0-impl.so
+#
+
+PRODUCT_PACKAGES += android.hardware.audio.service
+PRODUCT_PACKAGES += android.hardware.audio@6.0-impl
+PRODUCT_PACKAGES += android.hardware.audio.effect@6.0-impl
+PRODUCT_PACKAGES += android.hardware.audio.effect@6.0-util
+PRODUCT_PACKAGES += android.hardware.audio.common-util

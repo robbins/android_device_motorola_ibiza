@@ -3,9 +3,9 @@ on early-init
     chmod 0755 /sys/kernel/debug
     mount tracefs tracefs /sys/kernel/tracing
     chmod 0755 /sys/kernel/tracing
-    loglevel 6
-    setprop sys.init_log_level 6
-    write /proc/sys/kernel/printk 7
+    loglevel 4
+    setprop sys.init_log_level 4
+    write /proc/sys/kernel/printk 4
 
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
