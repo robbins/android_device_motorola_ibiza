@@ -124,3 +124,28 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/prebuilt/64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
 	$(LOCAL_PATH)/prebuilt/32/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-glnext.so \
 	$(LOCAL_PATH)/prebuilt/64/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-glnext.so
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/32/android.hardware.graphics.mapper@3.0-impl-qti-display.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@3.0-impl-qti-display.so \
+	$(LOCAL_PATH)/prebuilt/64/android.hardware.graphics.mapper@3.0-impl-qti-display.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@3.0-impl-qti-display.so \
+	$(LOCAL_PATH)/prebuilt/32/android.hardware.graphics.mapper@4.0-impl-qti-display.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so \
+	$(LOCAL_PATH)/prebuilt/64/android.hardware.graphics.mapper@4.0-impl-qti-display.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so \
+	$(LOCAL_PATH)/prebuilt/32/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/eglSubDriverAndroid.so \
+	$(LOCAL_PATH)/prebuilt/64/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/eglSubDriverAndroid.so \
+	$(LOCAL_PATH)/prebuilt/32/vulkan.adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.adreno.so \
+	$(LOCAL_PATH)/prebuilt/64/vulkan.adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.adreno.so \
+	$(LOCAL_PATH)/prebuilt/32/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_adreno.so \
+	$(LOCAL_PATH)/prebuilt/64/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_adreno.so \
+	$(LOCAL_PATH)/prebuilt/32/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_esx.so \
+	$(LOCAL_PATH)/prebuilt/64/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_esx.so
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/a619_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a619_gmu.bin \
+	$(LOCAL_PATH)/prebuilt/a630_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a630_sqe.fw \
+	$(LOCAL_PATH)/prebuilt/a660_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_gmu.bin \
+	$(LOCAL_PATH)/prebuilt/a660_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_sqe.fw \
+	$(LOCAL_PATH)/prebuilt/a660_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_zap.b00 \
+	$(LOCAL_PATH)/prebuilt/a660_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_zap.b01 \
+	$(LOCAL_PATH)/prebuilt/a660_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_zap.b02 \
+	$(LOCAL_PATH)/prebuilt/a660_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_zap.elf \
+	$(LOCAL_PATH)/prebuilt/a660_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_zap.mdt
