@@ -13,3 +13,6 @@ $(call inherit-product, device/motorola/ibiza/device-ibiza.mk)
 
 PRODUCT_PACKAGES += \
     Launcher3QuickStep
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.egl=adreno

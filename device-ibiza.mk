@@ -110,3 +110,17 @@ PRODUCT_PACKAGES += android.hardware.audio@6.0-impl
 PRODUCT_PACKAGES += android.hardware.audio.effect@6.0-impl
 PRODUCT_PACKAGES += android.hardware.audio.effect@6.0-util
 PRODUCT_PACKAGES += android.hardware.audio.common-util
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/32/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libEGL_adreno.so \
+	$(LOCAL_PATH)/prebuilt/64/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libEGL_adreno.so \
+	$(LOCAL_PATH)/prebuilt/32/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv1_CM_adreno.so \
+	$(LOCAL_PATH)/prebuilt/64/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv1_CM_adreno.so \
+	$(LOCAL_PATH)/prebuilt/32/libGLESv2_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv2_adreno.so \
+	$(LOCAL_PATH)/prebuilt/64/libGLESv2_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv2_adreno.so \
+	$(LOCAL_PATH)/prebuilt/32/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadreno_utils.so \
+	$(LOCAL_PATH)/prebuilt/64/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_utils.so \
+	$(LOCAL_PATH)/prebuilt/32/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
+	$(LOCAL_PATH)/prebuilt/64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
+	$(LOCAL_PATH)/prebuilt/32/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-glnext.so \
+	$(LOCAL_PATH)/prebuilt/64/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-glnext.so
