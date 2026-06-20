@@ -6,3 +6,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 PRODUCT_COPY_FILES += \
 	$(TARGET_PREBUILT_KERNEL):kernel
+
+# VINTF
+## Device manifest (from vendor)
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
