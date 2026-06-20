@@ -1,0 +1,14 @@
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+PRODUCT_NAME := aosp_ibiza
+PRODUCT_DEVICE := ibiza
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := AOSP on sdm4350
+PRODUCT_MANUFACTURER := Moto
+
+$(call inherit-product, device/motorola/ibiza/device-ibiza.mk)
+
+PRODUCT_PACKAGES += \
+    Launcher3QuickStep
