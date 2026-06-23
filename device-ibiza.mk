@@ -29,10 +29,31 @@ SOONG_CONFIG_qtidisplay := headless default
 SOONG_CONFIG_qtidisplay_default := true
 SOONG_CONFIG_qtidisplay_headless := false
 
+# Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
 
+# Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service \
     android.hardware.power-impl
+
+# A/B
+AB_OTA_UPDATER := true
+PRODUCT_PACKAGES += \
+  update_engine \
+  update_verifier
+# Debug builds
+PRODUCT_PACKAGES_DEBUG += update_engine_client
+
+# A/B updatable partitions
+AB_OTA_PARTITIONS := \
+  boot \
+  system \
+  vendor \
+  system_ext \
+  product \
+  dtbo \
+  vbmeta \
+  vbmeta_system

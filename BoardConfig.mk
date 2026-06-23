@@ -13,7 +13,13 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo
 
+# A/B updates
+TARGET_NO_RECOVERY := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+
+# QCOM Display HAL
 TARGET_IS_HEADLESS := false
 
+# QCOM Power HAL (and maybe others)
 TARGET_BOARD_PLATFORM := holi
 QCOM_BOARD_PLATFORMS += holi
