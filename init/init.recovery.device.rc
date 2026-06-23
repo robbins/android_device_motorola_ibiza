@@ -1,5 +1,6 @@
 on init
     setprop sys.usb.configfs 1
+    mount pstore pstore /sys/fs/pstore
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
