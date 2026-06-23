@@ -10,3 +10,19 @@ PRODUCT_COPY_FILES += \
 # VINTF
 ## Device manifest (from vendor)
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
+
+# Soong namespaces QCOM display HAL
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom/display \
+    hardware/qcom/display/gralloc
+
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+
+SOONG_CONFIG_NAMESPACES += qtidisplay
+SOONG_CONFIG_qtidisplay := headless default
+SOONG_CONFIG_qtidisplay_default := true
+SOONG_CONFIG_qtidisplay_headless := false
