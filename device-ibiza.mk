@@ -10,6 +10,8 @@ PRODUCT_COPY_FILES += \
 # VINTF
 ## Device manifest (from vendor)
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
+## Device-specific system manifest
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.device.xml
 
 # Soong namespaces QCOM display HAL
 PRODUCT_SOONG_NAMESPACES += \
