@@ -73,3 +73,8 @@ BOARD_MKBOOTIMG_ARGS := --base $(BOARD_KERNEL_BASE) \
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
 
+# SELinux
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+# Serial console
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0,115200n8
