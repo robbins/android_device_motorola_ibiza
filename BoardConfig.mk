@@ -70,6 +70,7 @@ BOARD_MKBOOTIMG_ARGS := --base $(BOARD_KERNEL_BASE) \
                         --dtb_offset $(BOARD_DTB_OFFSET)
 
 # Fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
 
@@ -78,3 +79,6 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Serial console
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0,115200n8
+
+# Recovery
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
