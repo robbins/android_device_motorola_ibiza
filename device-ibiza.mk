@@ -50,6 +50,7 @@ PRODUCT_PACKAGES_DEBUG += update_engine_client
 # A/B updatable partitions
 AB_OTA_PARTITIONS := \
   boot \
+  vendor_boot \
   system \
   vendor \
   system_ext \

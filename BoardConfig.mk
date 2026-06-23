@@ -1,4 +1,7 @@
+LOCAL_PATH := device/motorola/ibiza
+
 TARGET_BOOTLOADER_BOARD_NAME = ibiza
+PRODUCT_PLATFORM := qcom
 
 # Identify CPU architecture & ABI
 TARGET_ARCH := arm64
@@ -31,8 +34,21 @@ BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 6438256640
 BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_ext
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/4804000.ufshc
 
-# Boot partition
+# Boot & vendor boot partitions
+BOARD_BOOT_HEADER_VERSION := 3
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_RAMDISK_OFFSET := 0x01000000
+BOARD_MKBOOTIMG_ARGS := --base $(BOARD_KERNEL_BASE) \
+                        --pagesize $(BOARD_KERNEL_PAGESIZE) \
+                        --kernel_offset $(BOARD_KERNEL_OFFSET) \
+                        --ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
+                        --tags_offset $(BOARD_KERNEL_TAGS_OFFSET) \
+                        --header_version $(BOARD_BOOT_HEADER_VERSION) \
 
 # Partitions
 TARGET_COPY_OUT_SYSTEM := system
@@ -43,3 +59,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
+# Fstab
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/fstab.hardware:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(PRODUCT_PLATFORM)
