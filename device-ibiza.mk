@@ -26,3 +26,7 @@ SOONG_CONFIG_NAMESPACES += qtidisplay
 SOONG_CONFIG_qtidisplay := headless default
 SOONG_CONFIG_qtidisplay_default := true
 SOONG_CONFIG_qtidisplay_headless := false
+
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-service
