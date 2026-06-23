@@ -91,3 +91,8 @@ BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=4e00000.dwc3
 
 # Debugging
 BOARD_KERNEL_CMDLINE += printk.devkmsg=on androidboot.init_fatal_panic=true printk.always_kmsg_dump=1 androidboot.init_fatal_reboot_target=recovery
+
+# Userdata Partition
+TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
