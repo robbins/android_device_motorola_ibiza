@@ -82,3 +82,9 @@ BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0,115200n8
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+
+# Init script
+BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
+
+# USB
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=4e00000.dwc3

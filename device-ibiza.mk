@@ -61,3 +61,11 @@ AB_OTA_PARTITIONS := \
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# fastbootd
+PRODUCT_PACKAGES += \
+        fastbootd
+
+# Recovery init script
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
