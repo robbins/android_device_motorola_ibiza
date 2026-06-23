@@ -57,3 +57,6 @@ AB_OTA_PARTITIONS := \
   dtbo \
   vbmeta \
   vbmeta_system
+
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
