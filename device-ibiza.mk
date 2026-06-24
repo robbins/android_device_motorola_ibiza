@@ -79,3 +79,7 @@ PRODUCT_COPY_FILES += \
 # Mount partitions early (first-stage-mount)
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/fstab.hardware:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(PRODUCT_PLATFORM)
+
+# Boot HAL
+PRODUCT_PACKAGES += android.hardware.boot@1.1-service
+PRODUCT_PACKAGES += android.hardware.boot@1.1-impl
