@@ -7,6 +7,8 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 PRODUCT_COPY_FILES += \
 	$(TARGET_PREBUILT_KERNEL):kernel
 
+PRODUCT_PLATFORM := qcom
+
 # VINTF
 ## Device manifest (from vendor)
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
@@ -73,3 +75,7 @@ PRODUCT_COPY_FILES += \
 # System init
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.hardware.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
+
+# Mount partitions early (first-stage-mount)
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/fstab.hardware:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(PRODUCT_PLATFORM)
