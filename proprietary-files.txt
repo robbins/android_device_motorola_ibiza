@@ -62,8 +62,6 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # ANT
-lib/com.dsi.ant@1.0.so
-lib64/com.dsi.ant@1.0.so
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
@@ -216,8 +214,6 @@ vendor/etc/init/android.hardware.boot@1.1-service.rc
 vendor/etc/vintf/manifest/android.hardware.boot@1.1.xml
 
 # Camera
-lib/motorola.hardware.camera.imgtuner@1.0.so
-lib64/motorola.hardware.camera.imgtuner@1.0.so
 system_ext/lib/libarcsoft_calibverify_TriCamera.so
 system_ext/lib/libarcsoft_tricam_calibration.so
 system_ext/lib/libarcsoft_tricam_verification.so
@@ -810,22 +806,6 @@ vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
 
 # Display
-lib/com.motorola.hardware.display.panel@1.0.so
-lib/com.motorola.hardware.display.panel@1.1.so
-lib/vendor.qti.hardware.display.config-V1-ndk_platform.so
-lib/vendor.qti.hardware.display.config-V2-ndk_platform.so
-lib/vendor.qti.hardware.display.config-V3-ndk_platform.so
-lib/vendor.qti.hardware.display.config-V4-ndk_platform.so
-lib/vendor.qti.hardware.display.config-V5-ndk_platform.so
-lib/vendor.qti.hardware.display.config-V6-ndk_platform.so
-lib64/com.motorola.hardware.display.panel@1.0.so
-lib64/com.motorola.hardware.display.panel@1.1.so
-lib64/vendor.qti.hardware.display.config-V1-ndk_platform.so
-lib64/vendor.qti.hardware.display.config-V2-ndk_platform.so
-lib64/vendor.qti.hardware.display.config-V3-ndk_platform.so
-lib64/vendor.qti.hardware.display.config-V4-ndk_platform.so
-lib64/vendor.qti.hardware.display.config-V5-ndk_platform.so
-lib64/vendor.qti.hardware.display.config-V6-ndk_platform.so
 system_ext/lib/vendor.display.color@1.0.so
 system_ext/lib/vendor.display.color@1.1.so
 system_ext/lib/vendor.display.color@1.2.so
@@ -1245,7 +1225,6 @@ vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # Health
-lib64/motorola.hardware.health.storage@1.0.so
 vendor/bin/hw/android.hardware.health@2.1-service
 vendor/bin/hw/motorola.hardware.health.storage@1.0-service
 vendor/bin/hw/motorola.hardware.health@2.0-service
@@ -1311,14 +1290,6 @@ vendor/lib64/hw/local_time.default.so
 
 # Media
 etc/seccomp_policy/mediacodec.policy
-lib/libmedia_codeclist.so
-lib/libstagefright_bufferpool@2.0.1.so
-lib/libstagefright_codecbase.so
-lib/libstagefright_framecapture_utils.so
-lib64/libmedia_codeclist.so
-lib64/libstagefright_bufferpool@2.0.1.so
-lib64/libstagefright_codecbase.so
-lib64/libstagefright_framecapture_utils.so
 system_ext/lib/vendor.qti.hardware.vpp@1.1.so
 system_ext/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/bin/hw/android.hardware.media.omx@1.0-service
@@ -2155,8 +2126,6 @@ vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
 
 # Vibrator
-lib/motorola.hardware.vibrator@1.0.so
-lib64/motorola.hardware.vibrator@1.0.so
 vendor/bin/hw/motorola.hardware.vibrator@1.0-service
 vendor/bin/hw/vendor.qti.hardware.vibrator.service
 vendor/etc/init/motorola.hardware.vibrator@1.0-service.rc
@@ -2172,7 +2141,6 @@ vendor/lib64/motorola.hardware.vibrator@1.0.so
 vendor/lib64/vendor.qti.hardware.vibrator.impl.so
 
 # Wi-Fi
-lib64/vendor.qti.hardware.wifi.keystore@1.0.so
 vendor/bin/hw/android.hardware.wifi@1.0-service
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
@@ -2996,10 +2964,6 @@ vendor/lib64/motorola.hardware.fdrcontrol@1.2.so
 vendor/lib64/motorola.hardware.fmradio@1.0.so
 vendor/lib64/motorola.hardware.sxf-V1-ndk_platform.so
 vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so
-vendor/odm/etc/vintf/manifest_b.xml
-vendor/odm/etc/vintf/manifest_d.xml
-vendor/odm/etc/vintf/manifest_dn.xml
-vendor/odm/etc/vintf/manifest_n.xml
 vendor/usr/idc/uinput-fpc.idc
 vendor/usr/idc/uinput-fpsensor.idc
 vendor/usr/keylayout/ReadyForAirRemote_Consumer_Control.kl
