@@ -96,3 +96,6 @@ BOARD_KERNEL_CMDLINE += printk.devkmsg=on androidboot.init_fatal_panic=true prin
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+
+# Metadata encryption
+BOARD_USES_METADATA_PARTITION := true
