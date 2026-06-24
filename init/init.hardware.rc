@@ -1,0 +1,8 @@
+on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+    mount tracefs tracefs /sys/kernel/tracing
+    chmod 0755 /sys/kernel/tracing
+    loglevel 6
+    setprop sys.init_log_level 6
+    write /proc/sys/kernel/printk 7

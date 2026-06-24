@@ -69,3 +69,7 @@ PRODUCT_PACKAGES += \
 # Recovery init script
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
+
+# System init
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/init.hardware.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
