@@ -878,7 +878,6 @@ vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/memtrack.default.so
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib/com.motorola.hardware.display.panel@1.0.so
-vendor/lib/libEGL_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libdisplaydebug.so
 vendor/lib/libdisplayqos.so
@@ -948,7 +947,6 @@ vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/memtrack.default.so
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
-vendor/lib64/libEGL_adreno.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
@@ -2616,7 +2614,6 @@ vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libFileMux_proprietary.so
 vendor/lib/libFlacSwDec.so
-vendor/lib/libGLESv2_adreno.so
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
 vendor/lib/libI420colorconvert.so
@@ -2719,7 +2716,6 @@ vendor/lib/libpkip.so
 vendor/lib/libpowercallback.so
 vendor/lib/libpowercore.so
 vendor/lib/libpsi.so
-vendor/lib/libq3dtools_adreno.so
 vendor/lib/libqc2colorconvertfilter.so
 vendor/lib/libqc2filter.so
 vendor/lib/libqcci_legacy.so
@@ -2794,7 +2790,6 @@ vendor/lib/libvidhance_face_stabilizer.so
 vendor/lib/libvidhance_fbc.so
 vendor/lib/libvidhance_horizon_correction.so
 vendor/lib/libvidhance_stabilizer.so
-vendor/lib/libvndfwk_detect_jni.qti.so
 vendor/lib/libvpx.so
 vendor/lib/libwms.so
 vendor/lib/libwqe.so
@@ -2816,7 +2811,6 @@ vendor/lib64/libApeSwDec.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
 vendor/lib64/libFlacSwDec.so
-vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libI420colorconvert.so
@@ -2922,7 +2916,6 @@ vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libprekill.so
 vendor/lib64/libpsi.so
-vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/libqc2colorconvertfilter.so
 vendor/lib64/libqc2filter.so
 vendor/lib64/libqcci_legacy.so
@@ -2995,7 +2988,6 @@ vendor/lib64/libvidhance_face_stabilizer.so
 vendor/lib64/libvidhance_fbc.so
 vendor/lib64/libvidhance_horizon_correction.so
 vendor/lib64/libvidhance_stabilizer.so
-vendor/lib64/libvndfwk_detect_jni.qti.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/motorola.hardware.fdrcontrol@1.0.so
