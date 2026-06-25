@@ -18,18 +18,20 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_
 # Soong namespaces QCOM display HAL
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/display \
-    hardware/qcom/display/gralloc
+    hardware/qcom/display/gralloc \
+    hardware/qcom/display/libdebug
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display
 
 SOONG_CONFIG_NAMESPACES += qtidisplay
-SOONG_CONFIG_qtidisplay := headless default
+SOONG_CONFIG_qtidisplay := headless default gralloc4
 SOONG_CONFIG_qtidisplay_default := true
 SOONG_CONFIG_qtidisplay_headless := false
+SOONG_CONFIG_qtidisplay_gralloc4 := true
 
 # Health
 PRODUCT_PACKAGES += \
@@ -83,3 +85,14 @@ PRODUCT_COPY_FILES += \
 # Boot HAL
 PRODUCT_PACKAGES += android.hardware.boot@1.1-service
 PRODUCT_PACKAGES += android.hardware.boot@1.1-impl
+
+# vndservicemanager
+PRODUCT_PACKAGES += \
+        vndservicemanager
+
+# EGL
+PRODUCT_PACKAGES += \
+        libdisplaydebug
+
+# Inherit from the proprietary files makefile.
+$(call inherit-product, vendor/motorola/ibiza/ibiza-vendor.mk)
