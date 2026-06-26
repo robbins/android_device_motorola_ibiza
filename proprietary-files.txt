@@ -688,7 +688,7 @@
 #vendor/etc/init/cnd.rc
 #vendor/lib/libcne.so
 #vendor/lib/libcneapiclient.so
-#vendor/lib/libdiag.so
+vendor/lib/libdiag.so
 #vendor/lib/libidl.so
 #vendor/lib/libqmiservices.so
 #vendor/lib/libwpa_client.so
@@ -715,7 +715,7 @@
 #vendor/lib/vendor.qti.latency@2.1.so
 #vendor/lib64/libcne.so
 #vendor/lib64/libcneapiclient.so
-#vendor/lib64/libdiag.so
+vendor/lib64/libdiag.so
 #vendor/lib64/libidl.so
 #vendor/lib64/libqmiservices.so
 #vendor/lib64/libwpa_client.so
@@ -1061,7 +1061,7 @@ vendor/firmware/a660_zap.mdt
 #vendor/lib/libminkdescriptor.so
 #vendor/lib/libminksocket.so
 #vendor/lib/liboemcrypto.so
-#vendor/lib/libqcbor.so
+vendor/lib/libqcbor.so
 vendor/lib/libqrtr.so
 #vendor/lib/libtrustedapploader.so
 #vendor/lib64/mediacas/libclearkeycasplugin.so
@@ -1070,7 +1070,7 @@ vendor/lib/libqrtr.so
 #vendor/lib64/libminkdescriptor.so
 #vendor/lib64/libminksocket.so
 #vendor/lib64/liboemcrypto.so
-#vendor/lib64/libqcbor.so
+vendor/lib64/libqcbor.so
 vendor/lib64/libqrtr.so
 #vendor/lib64/libtrustedapploader.so
 #vendor/lib64/libwvhidl.so
@@ -1078,12 +1078,12 @@ vendor/lib64/libqrtr.so
 ## DRM (Qualcomm Secure Execution Environment)
 #system_ext/lib/vendor.qti.hardware.qseecom@1.0.so
 #system_ext/lib64/vendor.qti.hardware.qseecom@1.0.so
-#vendor/bin/qseecomd
-#vendor/etc/init/qseecomd.rc
-#vendor/lib/libQSEEComAPI.so
-#vendor/lib/libdrmfs.so
-#vendor/lib64/libQSEEComAPI.so
-#vendor/lib64/libdrmfs.so
+vendor/bin/qseecomd
+vendor/etc/init/qseecomd.rc
+vendor/lib/libQSEEComAPI.so
+vendor/lib/libdrmfs.so
+vendor/lib64/libQSEEComAPI.so
+vendor/lib64/libdrmfs.so
 #
 ## DRM (Qualcomm Trusted Execution Environment)
 #system_ext/lib/vendor.qti.hardware.qteeconnector@1.0.so
@@ -1141,8 +1141,10 @@ vendor/lib64/libqrtr.so
 #vendor/lib64/vendor.qti.hardware.fm@1.0.so
 #
 ## Gatekeeper
-#vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-#vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 #
 ## GNSS
 #vendor/bin/hw/android.hardware.gnss@2.1-service-qti
@@ -1272,14 +1274,14 @@ vendor/lib64/libqrtr.so
 #
 ## Keymaster
 #vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-#vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
-#vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
-#vendor/lib/libkeymasterdeviceutils.so
-#vendor/lib/libkeymasterutils.so
-#vendor/lib/libqtikeymaster4.so
-#vendor/lib64/libkeymasterdeviceutils.so
-#vendor/lib64/libkeymasterutils.so
-#vendor/lib64/libqtikeymaster4.so
+vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
+vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
+vendor/lib/libkeymasterdeviceutils.so
+vendor/lib/libkeymasterutils.so
+vendor/lib/libqtikeymaster4.so
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so
 #
 ## Light
 #vendor/bin/hw/android.hardware.lights-service.qti
@@ -2113,8 +2115,8 @@ vendor/lib64/libqrtr.so
 #vendor/app/TimeService/TimeService.apk
 #vendor/bin/time_daemon
 #vendor/etc/init/init.time_daemon.rc
-#vendor/lib/libtime_genoff.so
-#vendor/lib64/libtime_genoff.so
+vendor/lib/libtime_genoff.so
+vendor/lib64/libtime_genoff.so
 #
 ## Trusted UI
 #vendor/lib/vendor.qti.hardware.trustedui@1.0.so
@@ -2632,7 +2634,7 @@ vendor/lib64/libqrtr.so
 #vendor/lib/libdiagjni.so
 #vendor/lib/libdisp-aba.so
 #vendor/lib/libdrc.so
-#vendor/lib/libdrmtime.so
+vendor/lib/libdrmtime.so
 #vendor/lib/libdsd2pcm.so
 #vendor/lib/libexthwplugin.so
 #vendor/lib/libfastcrc.so
@@ -2680,7 +2682,7 @@ vendor/lib/libhdr_tm.so
 #vendor/lib/libnetmgr_nr_fusion.so
 #vendor/lib/libnetmgr_rmnet_ext.so
 #vendor/lib/libopestriping.so
-#vendor/lib/libops.so
+vendor/lib/libops.so
 #vendor/lib/libos.so
 #vendor/lib/libpasrutils.so
 #vendor/lib/libperfioctl.so
@@ -2702,7 +2704,7 @@ vendor/lib/libhdr_tm.so
 #vendor/lib/libqcrildatactl.so
 #vendor/lib/libqdcm-mode-parser.so
 #vendor/lib/libqdma_file_agent.so
-#vendor/lib/libqisl.so
+vendor/lib/libqisl.so
 #vendor/lib/libqll10.so
 #vendor/lib/libqllengine.so
 #vendor/lib/libqmi_csvt_srvc.so
@@ -2724,7 +2726,7 @@ vendor/lib/libqseed3.so
 #vendor/lib/libril-qc-ltedirectdisc.so
 #vendor/lib/libril-qc-radioconfig.so
 #vendor/lib/librilqmiservices.so
-#vendor/lib/librpmb.so
+vendor/lib/librpmb.so
 #vendor/lib/libsdm-colormgr-algo.so
 #vendor/lib/libsdsprpc.so
 #vendor/lib/libskewknob.so
@@ -2740,7 +2742,7 @@ vendor/lib/libqseed3.so
 #vendor/lib/libsoc_helper_jni.so
 #vendor/lib/libspkrprot.so
 #vendor/lib/libssc_default_listener.so
-#vendor/lib/libssd.so
+vendor/lib/libssd.so
 #vendor/lib/libstreamparser.so
 #vendor/lib/libsubsystem_control.so
 #vendor/lib/libsurround_3mic_proc.so
@@ -2826,7 +2828,7 @@ vendor/lib/libqseed3.so
 #vendor/lib64/libcvpcpuRev_skel.so
 #vendor/lib64/libdiagjni.so
 #vendor/lib64/libdisp-aba.so
-#vendor/lib64/libdrmtime.so
+vendor/lib64/libdrmtime.so
 #vendor/lib64/libembmsservice.so
 #vendor/lib64/libexthwplugin.so
 #vendor/lib64/libfp_ext_svc2.so
@@ -2879,7 +2881,7 @@ vendor/lib64/libhdr_tm.so
 #vendor/lib64/libnetmgr_nr_fusion.so
 #vendor/lib64/libnetmgr_rmnet_ext.so
 #vendor/lib64/libopestriping.so
-#vendor/lib64/libops.so
+vendor/lib64/libops.so
 #vendor/lib64/libos.so
 #vendor/lib64/libpasrutils.so
 #vendor/lib64/libperfioctl.so
@@ -2902,7 +2904,7 @@ vendor/lib64/libhdr_tm.so
 #vendor/lib64/libqcrildatactl.so
 #vendor/lib64/libqdcm-mode-parser.so
 #vendor/lib64/libqdma_file_agent.so
-#vendor/lib64/libqisl.so
+vendor/lib64/libqisl.so
 #vendor/lib64/libqll10.so
 #vendor/lib64/libqllengine.so
 #vendor/lib64/libqmi_csvt_srvc.so
@@ -2926,7 +2928,7 @@ vendor/lib64/libqseed3.so
 #vendor/lib64/libril-qc-ltedirectdisc.so
 #vendor/lib64/libril-qc-radioconfig.so
 #vendor/lib64/librilqmiservices.so
-#vendor/lib64/librpmb.so
+vendor/lib64/librpmb.so
 #vendor/lib64/libsdm-colormgr-algo.so
 #vendor/lib64/libsdsprpc.so
 #vendor/lib64/libskewknob.so
@@ -2941,7 +2943,7 @@ vendor/lib64/libqseed3.so
 #vendor/lib64/libspkrprot.so
 #vendor/lib64/libsplh.so
 #vendor/lib64/libssc_default_listener.so
-#vendor/lib64/libssd.so
+vendor/lib64/libssd.so
 #vendor/lib64/libsubsystem_control.so
 #vendor/lib64/libswregistrationalgo.so
 #vendor/lib64/libsynergy_loc_api.so
