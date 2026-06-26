@@ -94,5 +94,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         libdisplaydebug
 
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    lights.$(TARGET_BOARD_PLATFORM) \
+    memtrack.default \
+    android.hardware.audio.service \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.effect@6.0-util \
+    android.hardware.audio.common-util \
+    android.hardware.soundtrigger@2.1.vendor \
+    android.hardware.soundtrigger@2.2.vendor \
+    android.hardware.soundtrigger@2.3.vendor \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.audio@2.0-impl
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/motorola/ibiza/ibiza-vendor.mk)
