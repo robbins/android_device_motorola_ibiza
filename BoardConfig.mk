@@ -103,3 +103,8 @@ BOARD_ROOT_EXTRA_FOLDERS := metadata
 
 # Display / EGL
 TARGET_USES_GRALLOC4 := true
+
+# LKM
+vendor_lkm_dir := $(LOCAL_PATH)/lkm-5.4
+BOARD_VENDOR_KERNEL_MODULES := \
+  $(vendor_lkm_dir)/nova_0flash_mmi.ko

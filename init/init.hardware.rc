@@ -6,6 +6,8 @@ on early-init
     loglevel 6
     setprop sys.init_log_level 6
     write /proc/sys/kernel/printk 7
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d \
+        /vendor/lib/modules nova_0flash_mmi
 
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}

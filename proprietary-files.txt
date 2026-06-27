@@ -2503,8 +2503,8 @@ vendor/lib64/libtime_genoff.so
 #vendor/firmware/ICNL9911.bin
 #vendor/firmware/NT36xxx_MP_Setting_Criteria_6033.csv
 #vendor/firmware/aw882xx_spk_reg.bin
-#vendor/firmware/novatek_ts_fw.bin
-#vendor/firmware/novatek_ts_mp.bin
+vendor/firmware/novatek_ts_fw.bin
+vendor/firmware/novatek_ts_mp.bin
 #vendor/firmware/vpu20_1v.b01
 #vendor/firmware/vpu20_1v.b02
 #vendor/firmware/vpu20_1v.b03
