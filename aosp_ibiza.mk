@@ -15,4 +15,5 @@ PRODUCT_PACKAGES += \
 
 # EGL
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.hardware.egl=adreno
+    ro.hardware.egl=adreno \
+    ro.sf.lcd_density=280
