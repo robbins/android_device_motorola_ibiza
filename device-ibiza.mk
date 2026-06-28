@@ -113,5 +113,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/motorola/ibiza/ibiza-vendor.mk)
